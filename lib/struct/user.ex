@@ -42,7 +42,7 @@ defmodule Notion.User do
   end
   
   def from_json(json)
-  def from_json(json = %{type: "bot"}), do: Bot.from_json(json)
-  def from_json(json = %{type: "person"}), do: Person.from_json(json)
+  def from_json(json = %{"type" => "bot"}), do: Bot.from_json(json)
+  def from_json(json = %{"type" => "person"}), do: Person.from_json(json)
 
 end
