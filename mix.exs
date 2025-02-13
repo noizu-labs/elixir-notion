@@ -41,9 +41,10 @@ defmodule Notion.MixProject do
       mod: {
         Notion.Application,
         [
+          :logger, :finch, :jason
         ]
       },
-      extra_applications: [:logger, :finch, :jason]
+      extra_applications: []
     ]
   end
   
