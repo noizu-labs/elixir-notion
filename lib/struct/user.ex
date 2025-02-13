@@ -12,10 +12,10 @@ defmodule Notion.User do
     def from_json(json)
     def from_json(json) do
       %__MODULE__{
-        id: json.id,
-        name: json.name,
-        avatar_url: json.avatar_url,
-        email: json.person.email,
+        id: json["id"],
+        name: json["name"],
+        avatar_url: json["avatar_url"],
+        email: json["person"]["email"],
       }
     end
   end
@@ -32,11 +32,11 @@ defmodule Notion.User do
     def from_json(json)
     def from_json(json) do
       %__MODULE__{
-        id: json.id,
-        name: json.name,
-        avatar_url: json.avatar_url,
-        owner: json.bot.owner,
-        workspace_name: json.bot.workspace_name,
+        id: json["id"],
+        name: json["name"],
+        avatar_url: json["avatar_url"],
+        owner: json["bot"]["owner"],
+        workspace_name: json["bot"]["workspace_name"],
       }
     end
   end
